@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="fishing.css">
 </head>
 <body>
+  <div id="top"></div>
   <header>
     <h1>星露谷釣魚指南</h1>
     <nav>
@@ -28,7 +29,7 @@
       <h2>🐟 珍稀魚類圖鑑</h2>
       
       <div class="fish-grid">
-        <div class="fish-card legendary">
+        <div class="fish-card legendary" id="legend-fish">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Legend.png" alt="傳說之魚" class="fish-image">
@@ -63,7 +64,7 @@
           </div>
         </div>
 
-        <div class="fish-card rare">
+        <div class="fish-card rare" id="crimsonfish">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Crimsonfish.png" alt="緋紅魚" class="fish-image">
@@ -98,7 +99,7 @@
           </div>
         </div>
 
-        <div class="fish-card uncommon">
+        <div class="fish-card uncommon" id="angler">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Angler.png" alt="鮟鱇魚" class="fish-image">
@@ -133,7 +134,7 @@
           </div>
         </div>
 
-        <div class="fish-card rare">
+        <div class="fish-card rare" id="glacierfish">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Glacierfish.png" alt="冰川魚" class="fish-image">
@@ -168,7 +169,7 @@
           </div>
         </div>
 
-        <div class="fish-card special">
+        <div class="fish-card special" id="mutant-carp">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Mutant_Carp.png" alt="變種鯉魚" class="fish-image">
@@ -210,7 +211,7 @@
       <p class="generation-description">第一代傳說魚的後代，同樣珍稀但更容易捕獲，一年四季都能釣到！</p>
       
       <div class="fish-grid">
-        <div class="fish-card legendary-gen2">
+        <div class="fish-card legendary-gen2" id="legend-ii">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Legend_II.png" alt="傳說之魚二代" class="fish-image">
@@ -245,7 +246,7 @@
           </div>
         </div>
 
-        <div class="fish-card legendary-gen2">
+        <div class="fish-card legendary-gen2" id="son-of-crimsonfish">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Son_of_Crimsonfish.png" alt="緋紅魚之子" class="fish-image">
@@ -280,7 +281,7 @@
           </div>
         </div>
 
-        <div class="fish-card legendary-gen2">
+        <div class="fish-card legendary-gen2" id="ms-angler">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Ms._Angler.png" alt="雌鮟鱇魚" class="fish-image">
@@ -315,7 +316,7 @@
           </div>
         </div>
 
-        <div class="fish-card legendary-gen2">
+        <div class="fish-card legendary-gen2" id="glacierfish-jr">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Glacierfish_Jr..png" alt="小冰川魚" class="fish-image">
@@ -350,7 +351,7 @@
           </div>
         </div>
 
-        <div class="fish-card legendary-gen2">
+        <div class="fish-card legendary-gen2" id="radioactive-carp">
           <div class="fish-header">
             <div class="fish-icon">
               <img src="img/fishing/Radioactive_Carp.png" alt="放射性鯉魚" class="fish-image">
@@ -414,6 +415,83 @@
     <p>&copy; 2024 星露谷釣魚指南 - 成為釣魚大師的第一步</p>
   </footer>
 
+  <!-- 魚類快速跳轉選單 -->
+  <div class="fish-quick-nav">
+    <button class="quick-nav-toggle">🐟 快速跳轉</button>
+    <div class="quick-nav-menu">
+      <div class="nav-section">
+        <h4>第一代傳說魚</h4>
+        <a href="#legend-fish" class="fish-nav-item">
+          <span class="fish-emoji">🐉</span>
+          <span>傳說之魚</span>
+        </a>
+        <a href="#crimsonfish" class="fish-nav-item">
+          <span class="fish-emoji">🔴</span>
+          <span>緋紅魚</span>
+        </a>
+        <a href="#angler" class="fish-nav-item">
+          <span class="fish-emoji">🐟</span>
+          <span>鮟鱇魚</span>
+        </a>
+        <a href="#glacierfish" class="fish-nav-item">
+          <span class="fish-emoji">❄️</span>
+          <span>冰川魚</span>
+        </a>
+        <a href="#mutant-carp" class="fish-nav-item">
+          <span class="fish-emoji">🌈</span>
+          <span>變種鯉魚</span>
+        </a>
+      </div>
+      <div class="nav-section">
+        <h4>第二代傳說魚</h4>
+        <a href="#legend-ii" class="fish-nav-item">
+          <span class="fish-emoji">🌟</span>
+          <span>傳說之魚二代</span>
+        </a>
+        <a href="#son-of-crimsonfish" class="fish-nav-item">
+          <span class="fish-emoji">🔸</span>
+          <span>緋紅魚之子</span>
+        </a>
+        <a href="#ms-angler" class="fish-nav-item">
+          <span class="fish-emoji">🐠</span>
+          <span>雌鮟鱇魚</span>
+        </a>
+        <a href="#glacierfish-jr" class="fish-nav-item">
+          <span class="fish-emoji">🧊</span>
+          <span>小冰川魚</span>
+        </a>
+        <a href="#radioactive-carp" class="fish-nav-item">
+          <span class="fish-emoji">☢️</span>
+          <span>放射性鯉魚</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手機版快速導覽列 -->
+  <nav class="mobile-nav">
+    <a href="#top" class="nav-item">
+      <div class="nav-icon">🏠</div>
+      <span>頂部</span>
+    </a>
+    <a href="#legendary" class="nav-item">
+      <div class="nav-icon">👑</div>
+      <span>第一代</span>
+    </a>
+    <a href="#second-generation" class="nav-item">
+      <div class="nav-icon">⭐</div>
+      <span>第二代</span>
+    </a>
+    <a href="#tips" class="nav-item">
+      <div class="nav-icon">💡</div>
+      <span>技巧</span>
+    </a>
+    <a href="index.html" class="nav-item">
+      <div class="nav-icon">🌾</div>
+      <span>首頁</span>
+    </a>
+  </nav>
+
   <!-- 圖片放大模態框 -->
   <div id="imageModal" class="modal">
     <div class="modal-content">
@@ -460,6 +538,31 @@
           modal.style.display = 'none';
         }
       });
+      
+      // 魚類快速跳轉功能
+      const quickNavToggle = document.querySelector('.quick-nav-toggle');
+      const quickNavMenu = document.querySelector('.quick-nav-menu');
+      
+      if (quickNavToggle && quickNavMenu) {
+        quickNavToggle.addEventListener('click', function() {
+          quickNavMenu.classList.toggle('show');
+        });
+        
+        // 點擊外部關閉選單
+        document.addEventListener('click', function(event) {
+          if (!event.target.closest('.fish-quick-nav')) {
+            quickNavMenu.classList.remove('show');
+          }
+        });
+        
+        // 點擊魚類連結後關閉選單
+        const fishNavItems = document.querySelectorAll('.fish-nav-item');
+        fishNavItems.forEach(function(item) {
+          item.addEventListener('click', function() {
+            quickNavMenu.classList.remove('show');
+          });
+        });
+      }
     });
   </script>
 </body>

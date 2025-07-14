@@ -441,6 +441,169 @@ footer {
   to { transform: scale(1); opacity: 1; }
 }
 
+/* 手機版快速導覽列 */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #2d4a2b, #556b2f);
+  border-top: 3px solid #9acd32;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  padding: 8px 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 8px 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  min-width: 60px;
+}
+
+.nav-item:hover {
+  background: rgba(154, 205, 50, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-item:active {
+  transform: translateY(0);
+  background: rgba(154, 205, 50, 0.5);
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.nav-item span {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* 為頁面底部添加間距，避免被導覽列遮擋 */
+body {
+  padding-bottom: 80px;
+}
+
+/* 魚類快速跳轉選單 */
+.fish-quick-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 998;
+}
+
+.quick-nav-toggle {
+  background: linear-gradient(135deg, #4682b4, #2e5c8a);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(70, 130, 180, 0.4);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.quick-nav-toggle:hover {
+  background: linear-gradient(135deg, #2e5c8a, #1e3a5f);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(70, 130, 180, 0.6);
+}
+
+.quick-nav-menu {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid #4682b4;
+  min-width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  animation: slideIn 0.3s ease;
+}
+
+.quick-nav-menu.show {
+  display: block;
+}
+
+.nav-section {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-section:last-child {
+  border-bottom: none;
+}
+
+.nav-section h4 {
+  margin: 0 0 10px 0;
+  color: #2d4a2b;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #9acd32;
+  padding-bottom: 5px;
+}
+
+.fish-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #2d4a2b;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.fish-nav-item:hover {
+  background: linear-gradient(135deg, #f0f8e8, #e8f4e8);
+  transform: translateX(-3px);
+  box-shadow: 0 2px 8px rgba(154, 205, 50, 0.3);
+}
+
+.fish-emoji {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+.fish-nav-item span:last-child {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* 滾動動畫 */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* 響應式設計 */
 @media (max-width: 768px) {
   .fish-grid {
@@ -481,5 +644,49 @@ footer {
     font-size: 28px;
     width: 40px;
     height: 40px;
+  }
+  
+  /* 手機版顯示導覽列 */
+  .mobile-nav {
+    display: flex !important;
+  }
+  
+  /* 調整頁面底部間距 */
+  body {
+    padding-bottom: 90px;
+  }
+  
+  /* 隱藏桌面版導航 */
+  header nav {
+    display: none;
+  }
+  
+  /* 手機版魚類快速跳轉調整 */
+  .fish-quick-nav {
+    right: 10px;
+    top: 40%;
+  }
+  
+  .quick-nav-toggle {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .quick-nav-menu {
+    min-width: 200px;
+    max-height: 300px;
+    bottom: 50px;
+  }
+  
+  .nav-section {
+    padding: 12px;
+  }
+  
+  .fish-nav-item {
+    padding: 6px 10px;
+  }
+  
+  .fish-nav-item span:last-child {
+    font-size: 0.8rem;
   }
 }

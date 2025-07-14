@@ -563,6 +563,49 @@
           });
         });
       }
+      
+      // 手機版導覽列自動隱藏功能
+      let lastScrollTop = 0;
+      let scrollTimeout;
+      const mobileNav = document.querySelector('.mobile-nav');
+      
+      if (mobileNav && window.innerWidth <= 768) {
+        window.addEventListener('scroll', function() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          // 清除之前的timeout
+          clearTimeout(scrollTimeout);
+          
+          if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // 向下滾動且超過100px，隱藏導覽列
+            mobileNav.classList.add('hidden');
+            document.body.classList.add('nav-hidden');
+          } else {
+            // 向上滾動，顯示導覽列
+            mobileNav.classList.remove('hidden');
+            document.body.classList.remove('nav-hidden');
+          }
+          
+          lastScrollTop = scrollTop;
+          
+          // 停止滾動3秒後顯示導覽列
+          scrollTimeout = setTimeout(function() {
+            mobileNav.classList.remove('hidden');
+            document.body.classList.remove('nav-hidden');
+          }, 3000);
+        });
+        
+        // 觸摸底部區域時顯示導覽列
+        document.addEventListener('touchstart', function(event) {
+          const touch = event.touches[0];
+          const windowHeight = window.innerHeight;
+          
+          if (touch.clientY > windowHeight - 100) {
+            mobileNav.classList.remove('hidden');
+            document.body.classList.remove('nav-hidden');
+          }
+        });
+      }
     });
   </script>
 </body>

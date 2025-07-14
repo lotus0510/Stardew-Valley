@@ -455,6 +455,12 @@ footer {
   padding: 8px 0;
   justify-content: space-around;
   align-items: center;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav.hidden {
+  transform: translateY(100%);
 }
 
 .nav-item {
@@ -653,6 +659,11 @@ body {
   
   /* 調整頁面底部間距 */
   body {
+    padding-bottom: 20px;
+  }
+  
+  /* 當導覽列顯示時增加底部間距 */
+  body:not(.nav-hidden) {
     padding-bottom: 90px;
   }
   

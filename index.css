@@ -166,6 +166,7 @@ main {
 
 /* 活動按鈕 */
 .activity-btn {
+  display: inline-block;
   background: linear-gradient(135deg, #9acd32, #7ba428);
   color: #ffffff;
   border: none;
@@ -175,10 +176,13 @@ main {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
 }
 
 .activity-btn:hover {
   background: linear-gradient(135deg, #7ba428, #6b8e23);
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(123, 164, 40, 0.3);
+  color: #ffffff;
 }

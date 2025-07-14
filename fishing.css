@@ -1,0 +1,485 @@
+/* 釣魚頁面專用樣式 */
+
+/* 釣魚介紹區域 */
+.fishing-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #87ceeb, #4682b4);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 6px 20px rgba(70, 130, 180, 0.3);
+}
+
+.fishing-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fishing-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 世代描述 */
+.generation-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #556b2f;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: rgba(0, 206, 209, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid #00ced1;
+}
+
+/* 魚類收藏區域 */
+.fish-collection {
+  margin-bottom: 50px;
+}
+
+.fish-collection h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2d4a2b;
+  margin-bottom: 30px;
+}
+
+/* 魚類網格 */
+.fish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* 魚類卡片 */
+.fish-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.fish-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0.3;
+}
+
+.fish-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* 魚類頭部 */
+.fish-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.fish-icon {
+  font-size: 2.5rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: rgba(135, 206, 235, 0.1);
+  overflow: hidden;
+  padding: 8px;
+}
+
+.fish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.fish-card:hover .fish-image {
+  transform: scale(1.05);
+}
+
+.fish-header h3 {
+  flex: 1;
+  font-size: 1.4rem;
+  color: #2d4a2b;
+  margin: 0;
+}
+
+/* 稀有度徽章 */
+.rarity-badge {
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.legendary-badge {
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  color: #8b4513;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+}
+
+.rare-badge {
+  background: linear-gradient(135deg, #9370db, #6a5acd);
+  color: white;
+}
+
+.uncommon-badge {
+  background: linear-gradient(135deg, #32cd32, #228b22);
+  color: white;
+}
+
+.special-badge {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+}
+
+.gen2-badge {
+  background: linear-gradient(135deg, #00ced1, #20b2aa);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 206, 209, 0.4);
+}
+
+/* 魚類詳情 */
+.fish-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #556b2f;
+  min-width: 100px;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  text-align: right;
+  color: #2d4a2b;
+  flex: 1;
+  margin-left: 15px;
+  line-height: 1.4;
+}
+
+/* Location 項目特殊樣式 */
+.location-item .detail-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.location-text {
+  text-align: right;
+  line-height: 1.4;
+}
+
+.location-image {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #9acd32;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location-image:hover {
+  transform: scale(1.1);
+  border-color: #7ba428;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* 技能等級樣式 */
+.skill-high {
+  color: #dc143c;
+  font-weight: bold;
+}
+
+.skill-medium {
+  color: #ff8c00;
+  font-weight: bold;
+}
+
+.skill-low {
+  color: #32cd32;
+  font-weight: bold;
+}
+
+.skill-none {
+  color: #808080;
+  font-style: italic;
+}
+
+/* 季節樣式 */
+.season-spring {
+  color: #32cd32;
+  font-weight: bold;
+}
+
+.season-summer {
+  color: #ffa500;
+  font-weight: bold;
+}
+
+.season-autumn {
+  color: #ff6347;
+  font-weight: bold;
+}
+
+.season-winter {
+  color: #4169e1;
+  font-weight: bold;
+}
+
+.season-all {
+  color: #9370db;
+  font-weight: bold;
+}
+
+/* 天氣樣式 */
+.weather-rain {
+  color: #4682b4;
+  font-weight: bold;
+}
+
+.weather-any {
+  color: #808080;
+  font-style: italic;
+}
+
+/* 魚類卡片特殊顏色 */
+.fish-card.legendary {
+  border-color: #ffd700;
+  color: #ff8c00;
+}
+
+.fish-card.rare {
+  border-color: #9370db;
+  color: #9370db;
+}
+
+.fish-card.uncommon {
+  border-color: #32cd32;
+  color: #32cd32;
+}
+
+.fish-card.special {
+  border-color: #ff69b4;
+  color: #ff69b4;
+}
+
+.fish-card.legendary-gen2 {
+  border-color: #00ced1;
+  color: #00ced1;
+}
+
+.fish-card.legendary-gen2:hover {
+  border-color: #20b2aa;
+  background: linear-gradient(135deg, #e0ffff, #ffffff);
+}
+
+/* 釣魚技巧區域 */
+.fishing-tips {
+  margin-bottom: 40px;
+}
+
+.fishing-tips h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2d4a2b;
+  margin-bottom: 30px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tip-card {
+  background: linear-gradient(135deg, #f0f8e8, #ffffff);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #9acd32;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(154, 205, 50, 0.2);
+}
+
+.tip-card h3 {
+  color: #2d4a2b;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.tip-card p {
+  color: #556b2f;
+  line-height: 1.5;
+}
+
+/* 頁腳 */
+footer {
+  background: linear-gradient(135deg, #2d4a2b, #556b2f);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* 圖片放大模態框樣式 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+#modalImage {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+#modalCaption {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close:hover {
+  background: rgba(255, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .fish-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .detail-value {
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  .fish-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 95%;
+  }
+  
+  #modalImage {
+    max-height: 60vh;
+  }
+  
+  .close {
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+  }
+}

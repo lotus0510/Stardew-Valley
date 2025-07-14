@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>釣魚指南 - 星露谷</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="fishing.css">
+</head>
+<body>
+  <header>
+    <h1>星露谷釣魚指南</h1>
+    <nav>
+      <a href="index.html">返回首頁</a>
+      <a href="#legendary">第一代傳說魚</a>
+      <a href="#second-generation">第二代傳說魚</a>
+      <a href="#tips">釣魚技巧</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="fishing-intro">
+      <h2>🎣 釣魚大師指南</h2>
+      <p>在星露谷的各個水域中，隱藏著許多珍稀魚類等待著熟練的釣手發現。掌握正確的時間、地點和技巧，成為真正的釣魚大師！</p>
+    </section>
+
+    <section id="legendary" class="fish-collection">
+      <h2>🐟 珍稀魚類圖鑑</h2>
+      
+      <div class="fish-grid">
+        <div class="fish-card legendary">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Legend.png" alt="傳說之魚" class="fish-image">
+            </div>
+            <h3>傳說之魚</h3>
+            <span class="rarity-badge legendary-badge">傳說級</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 地點說明</span>
+              <div class="detail-value">
+                <span class="location-text">山湖深水區（木樁附近也可）</span>
+                <img src="img/fishing/450px-LegendLocations.png" alt="山湖" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-high">10級</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌸 季節</span>
+              <span class="detail-value season-spring">春季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌧️ 天氣</span>
+              <span class="detail-value weather-rain">雨天</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fish-card rare">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Crimsonfish.png" alt="緋紅魚" class="fish-image">
+            </div>
+            <h3>緋紅魚</h3>
+            <span class="rarity-badge rare-badge">稀有</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 地點說明</span>
+              <div class="detail-value">
+                <span class="location-text">穿過斷橋，前往沙灘最東側（碼頭或海岸均可）</span>
+                <img src="img/fishing/CrimsonfishLocations.png" alt="東側沙灘" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-medium">5級以上</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">☀️ 季節</span>
+              <span class="detail-value season-summer">夏季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fish-card uncommon">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Angler.png" alt="鮟鱇魚" class="fish-image">
+            </div>
+            <h3>鮟鱇魚</h3>
+            <span class="rarity-badge uncommon-badge">不常見</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 地點說明</span>
+              <div class="detail-value">
+                <span class="location-text">鵜鶘鎮北方河流（Joja超市以北木橋附近）</span>
+                <img src="img/fishing/450px-AnglerLocations.png" alt="鵜鶘鎮河流" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-low">3級以上</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🍂 季節</span>
+              <span class="detail-value season-autumn">秋季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fish-card rare">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Glacierfish.png" alt="冰川魚" class="fish-image">
+            </div>
+            <h3>冰川魚</h3>
+            <span class="rarity-badge rare-badge">稀有</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 地點說明</span>
+              <div class="detail-value">
+                <span class="location-text">煤礦森林箭形小島的最南端</span>
+                <img src="img/fishing/GlacierfishLocations_ZH.png" alt="煤礦森林" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-medium">6級以上</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">❄️ 季節</span>
+              <span class="detail-value season-winter">冬季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fish-card special">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Mutant_Carp.png" alt="變種鯉魚" class="fish-image">
+            </div>
+            <h3>變種鯉魚</h3>
+            <span class="rarity-badge special-badge">特殊</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 地點說明</span>
+              <div class="detail-value">
+                <span class="location-text">下水道</span>
+                <img src="img/fishing/Mutant_CarpLocations.png" alt="下水道" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-none">無限制</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌍 季節</span>
+              <span class="detail-value season-all">任意季節</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="second-generation" class="fish-collection">
+      <h2>🌟 第二代傳說魚類</h2>
+      <p class="generation-description">第一代傳說魚的後代，同樣珍稀但更容易捕獲，一年四季都能釣到！</p>
+      
+      <div class="fish-grid">
+        <div class="fish-card legendary-gen2">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Legend_II.png" alt="傳說之魚二代" class="fish-image">
+            </div>
+            <h3>傳說之魚二代</h3>
+            <span class="rarity-badge gen2-badge">第二代</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 位置</span>
+              <div class="detail-value">
+                <span class="location-text">深山湖泊的深水區（包括木樁附近）</span>
+                <img src="img/fishing/450px-LegendLocations.png" alt="山湖" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-high">10級</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌍 季節</span>
+              <span class="detail-value season-all">一年四季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fish-card legendary-gen2">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Son_of_Crimsonfish.png" alt="緋紅魚之子" class="fish-image">
+            </div>
+            <h3>緋紅魚之子</h3>
+            <span class="rarity-badge gen2-badge">第二代</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 位置</span>
+              <div class="detail-value">
+                <span class="location-text">穿過斷橋，前往沙灘最東側（碼頭或海岸均可）</span>
+                <img src="img/fishing/CrimsonfishLocations.png" alt="東側沙灘" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-medium">5級</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌍 季節</span>
+              <span class="detail-value season-all">一年四季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fish-card legendary-gen2">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Ms._Angler.png" alt="雌鮟鱇魚" class="fish-image">
+            </div>
+            <h3>雌鮟鱇魚</h3>
+            <span class="rarity-badge gen2-badge">第二代</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 位置</span>
+              <div class="detail-value">
+                <span class="location-text">鵜鶘鎮北方河流（Joja超市以北木橋附近）</span>
+                <img src="img/fishing/450px-AnglerLocations.png" alt="鵜鶘鎮河流" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-low">3級</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌍 季節</span>
+              <span class="detail-value season-all">一年四季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fish-card legendary-gen2">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Glacierfish_Jr..png" alt="小冰川魚" class="fish-image">
+            </div>
+            <h3>小冰川魚</h3>
+            <span class="rarity-badge gen2-badge">第二代</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 位置</span>
+              <div class="detail-value">
+                <span class="location-text">煤礦森林箭形小島的最南端</span>
+                <img src="img/fishing/GlacierfishLocations_ZH.png" alt="煤礦森林" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-medium">6級</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌍 季節</span>
+              <span class="detail-value season-all">一年四季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fish-card legendary-gen2">
+          <div class="fish-header">
+            <div class="fish-icon">
+              <img src="img/fishing/Radioactive_Carp.png" alt="放射性鯉魚" class="fish-image">
+            </div>
+            <h3>放射性鯉魚</h3>
+            <span class="rarity-badge gen2-badge">第二代</span>
+          </div>
+          <div class="fish-details">
+            <div class="detail-item location-item">
+              <span class="detail-label">📍 位置</span>
+              <div class="detail-value">
+                <span class="location-text">下水道</span>
+                <img src="img/fishing/Mutant_CarpLocations.png" alt="下水道" class="location-image">
+              </div>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🎯 技能需求</span>
+              <span class="detail-value skill-none">無限制</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">⏰ 時間</span>
+              <span class="detail-value">任意時間</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌍 季節</span>
+              <span class="detail-value season-all">一年四季</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">🌤️ 天氣</span>
+              <span class="detail-value weather-any">任意天氣</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips" class="fishing-tips">
+      <h2>💡 釣魚技巧</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>🎯 技能提升</h3>
+          <p>多釣魚可以提升釣魚技能，高等級能釣到更珍稀的魚類</p>
+        </div>
+        <div class="tip-card">
+          <h3>🌧️ 天氣影響</h3>
+          <p>某些魚類只在特定天氣出現，注意天氣預報</p>
+        </div>
+        <div class="tip-card">
+          <h3>📍 地點選擇</h3>
+          <p>不同水域有不同的魚類，探索各個釣點</p>
+        </div>
+        <div class="tip-card">
+          <h3>⏰ 時間把握</h3>
+          <p>有些魚類只在特定時間段出現</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 星露谷釣魚指南 - 成為釣魚大師的第一步</p>
+  </footer>
+
+  <!-- 圖片放大模態框 -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <div id="modalCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    // 圖片放大功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const modalCaption = document.getElementById('modalCaption');
+      const closeBtn = document.getElementsByClassName('close')[0];
+      
+      // 為所有location圖片添加點擊事件
+      const locationImages = document.querySelectorAll('.location-image');
+      locationImages.forEach(function(img) {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+          modal.style.display = 'block';
+          modalImg.src = this.src;
+          modalCaption.textContent = this.alt;
+        });
+      });
+      
+      // 關閉模態框
+      closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+      
+      // 點擊模態框外部關閉
+      modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+      
+      // ESC鍵關閉
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
